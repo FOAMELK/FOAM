@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Layout for a single list item -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="162dp"
+    android:layout_height="196dp"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    android:minHeight="48dp"
+    android:background="#00000000">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#99000000">
+
+            <ImageView
+                android:id="@+id/beer_image"
+                android:layout_width="162dp"
+                android:layout_height="162dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="#000E0E0E"
+                android:src="@drawable/carlsberg_pilsner" />
+
+            <TextView
+                android:id="@+id/alcohol_pc_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/beer_image"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:shadowColor="@color/text_shadow"
+                android:shadowDx="-2"
+                android:shadowDy="-2"
+                android:shadowRadius="1"
+                android:text="4.6 %"
+                android:textAlignment="textEnd"
+                android:textColor="#E3DED5"
+                android:textSize="12dp" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/alcohol_pc_text_view"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="5"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:theme="@style/RatingBar"/>
+
+            <TextView
+                android:id="@+id/name_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_alignParentBottom="true"
+                android:shadowColor="@color/text_shadow"
+                android:shadowDx="-2"
+                android:shadowDy="-2"
+                android:shadowRadius="1"
+                android:autoSizeTextType="uniform"
+                android:text="Carlsberg Pilsner"
+                android:textAlignment="center"
+                android:textColor="#E3DED5"
+                android:background="#00AAAAAA" />
+        </RelativeLayout>
+</LinearLayout>
